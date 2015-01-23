@@ -5,13 +5,101 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-	"normalize",
-	"bourbon/bourbon",
-	"grid-settings",
-	"neat/neat",
-	"colors",
-	"typography",
-  "base",
-  "layout",
-	"syntax-highlighting"
-;
+	"normalize";
+
+
+@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic,700,700italic);
+
+$salmon: #ee6557;
+$dark: #333333;
+$light: #fdfdfd;
+$root: #A2B627;
+$tribute: #F7D043;
+
+$type: 'Anonymous Pro', 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {height: 100%;}
+
+body {
+	height: 100%;
+	border: 15px solid $salmon;
+	background: $light;	
+	font-family: $type;
+	font-size: 20px;
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+article {
+	max-width: 94%;
+}
+
+.container {
+	
+	width: 460px;
+	max-width: 100%;
+}
+
+h1 {
+	color: $salmon;
+	text-align: center;
+}
+
+a {
+	color: $salmon;
+	&.root-link {
+		color: $root;
+	}
+
+	&.tribute-link {
+		color: $tribute;
+	}
+}
+
+
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li:before {
+		content: "#";
+		color: $dark;
+		font-weight: 700;
+		font-style: italic;
+		text-decoration: none;
+		margin-right: 0.5em;
+	}
+	li {
+		margin: 0.5em 0;
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 1em;
+	p {
+		font-size: 0.75em;
+		text-align: center;
+	}
+}
+
+@media all and (max-width:460px) { 
+	body {
+		font-size: 16px;
+		border: 10px solid $salmon;
+	}
+}
