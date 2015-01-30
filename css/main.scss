@@ -44,7 +44,7 @@ body {
 }
 
 article {
-	max-width: 94%;
+	max-width: 100%;
 }
 
 .container {
@@ -81,16 +81,24 @@ ul {
 		font-weight: 700;
 		font-style: italic;
 		text-decoration: none;
-		margin-right: 0.5em;
+		position: relative;
+		left: -0.5em;
 	}
 	li {
-		margin: 0.5em 0;
+		margin: 0.75em 0 0.75em 1em;
+		padding-left: 0.5em;
+text-indent: -0.5em;
 	}
 }
 
 footer {
+	max-width: 94%;
 	position: absolute;
-	bottom: 1em;
+	align-items: center;
+  -webkit-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	bottom: 0.5em;
 	p {
 		font-size: 0.75em;
 		text-align: center;
