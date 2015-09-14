@@ -8,15 +8,19 @@
 	"normalize";
 
 
-@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Yeseva+One|Merriweather+Sans:300);
+
 
 $salmon: #ee6557;
 $dark: #333333;
 $light: #fdfdfd;
 $root: #A2B627;
 $tribute: #F7D043;
+$bg: #F2D653;
+$text: #37424A;
 
-$type: 'Anonymous Pro', 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+$heading: 'Yeseva One', Georgia, serif;
+$type: 'Merriweather Sans', Helvetica, sans-serif;
 
 * {
 	-webkit-box-sizing: border-box;
@@ -28,10 +32,10 @@ html {height: 100%;}
 
 body {
 	height: 100%;
-	border: 15px solid $salmon;
-	background: $light;	
+	background: $bg;
+	color: $text;
 	font-family: $type;
-	font-size: 20px;
+	font-size: 18px;
 	display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -49,24 +53,24 @@ article {
 
 .container {
 	
-	width: 460px;
+	width: 640px;
 	max-width: 100%;
 }
 
 h1 {
-	color: $salmon;
+	font-family: $heading;
+	font-size: 2.5em;
+	text-transform: lowercase;
 	text-align: center;
 }
 
-a {
-	color: $salmon;
-	&.root-link {
-		color: $root;
-	}
+p {
+	padding: 10px;
+	line-height: 1.5em;
+}
 
-	&.tribute-link {
-		color: $tribute;
-	}
+a {
+	color: $text;
 }
 
 
@@ -75,19 +79,11 @@ ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	li:before {
-		content: "#";
-		color: $dark;
-		font-weight: 700;
-		font-style: italic;
-		text-decoration: none;
-		position: relative;
-		left: -0.5em;
-	}
+	text-align: center;
+	line-height: 1.5em;
 	li {
-		margin: 0.75em 0 0.75em 1em;
-		padding-left: 0.5em;
-text-indent: -0.5em;
+		display: inline-block;
+		margin: 0 0.5em;
 	}
 }
 
@@ -108,6 +104,5 @@ footer {
 @media all and (max-width:460px) { 
 	body {
 		font-size: 16px;
-		border: 10px solid $salmon;
 	}
 }
