@@ -1,13 +1,18 @@
-# Site settings
+---
 title: Jordan Justice | Designer, developer, and thinker rooted in Toledo, Ohio.
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: jordan@jordanjustice.me
-description: > # this means to ignore newlines until "baseurl:"
+description: |
   Designer, developer, and thinker rooted in Toledo, Ohio.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jordanjustice.me" # the base hostname & protocol for your site
-
+baseurl: ''
+url: http://jordanjustice.me
 sass:
   style: :compressed
-
-# Build settings
 markdown: kramdown
