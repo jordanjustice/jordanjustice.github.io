@@ -9,8 +9,9 @@ collections:
     title: Uploads
     output: true
 email: jordan@jordanjustice.me
-description: |
-  Designer, developer, and thinker rooted in Toledo, Ohio.
+description: 'Designer, developer, and thinker rooted in Toledo, Ohio.
+
+'
 baseurl: ''
 url: http://jordanjustice.me
 sass:
