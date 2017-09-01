@@ -1,62 +1,74 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+import { Container } from 'react-responsive-grid'
 
-import './index.css'
+import { rhythm, scale } from '../utils/typography'
 
-const Header = () =>
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
+class Template extends React.Component {
+  render() {
+    const { location, children } = this.props
+    let header
+    if (location.pathname === '/') {
+      header = (
+        <h1
           style={{
-            color: 'white',
-            textDecoration: 'none',
+            ...scale(1.5),
+            marginBottom: rhythm(1.5),
+            marginTop: 0,
           }}
         >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-
-const TemplateWrapper = ({ children }) =>
-  <div>
-    <Helmet
-      title="Gatsby Default Starter"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
-  </div>
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+          <Link
+            style={{
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit',
+            }}
+            to={'/'}
+          >
+            Gatsby Starter Blog
+          </Link>
+        </h1>
+      )
+    } else {
+      header = (
+        <h3
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            marginTop: 0,
+            marginBottom: rhythm(-1),
+          }}
+        >
+          <Link
+            style={{
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit',
+            }}
+            to={'/'}
+          >
+            Gatsby Starter Blog
+          </Link>
+        </h3>
+      )
+    }
+    return (
+      <Container
+        style={{
+          maxWidth: rhythm(24),
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        }}
+      >
+        {header}
+        {children()}
+      </Container>
+    )
+  }
 }
 
-export default TemplateWrapper
+Template.propTypes = {
+  children: React.PropTypes.function,
+  location: React.PropTypes.object,
+  route: React.PropTypes.object,
+}
+
+export default Template
