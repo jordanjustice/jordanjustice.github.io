@@ -19,25 +19,35 @@ class BlogIndex extends React.Component {
           if (post.node.path !== "/404/") {
             const title = get(post, "node.frontmatter.title") || post.node.path
             return (
-              <div>
-                <h3
+              <article
+                style={{
+                  marginBottom: rhythm(4)
+                }}
+              >
+                <h2
                   key={post.node.frontmatter.path}
                   style={{
                     marginBottom: rhythm(1 / 4),
                   }}
                 >
                   <Link
-                    style={{ boxShadow: "none" }}
+                    style={{
+                      boxShadow: "none",
+                      textDecoration: "none",
+                      color: "inherit"
+                    }}
                     to={post.node.frontmatter.path}
                   >
                     {post.node.frontmatter.title}
                   </Link>
-                </h3>
-                <small>
-                  {post.node.frontmatter.date}
-                </small>
-                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-              </div>
+                </h2>
+                <p>
+                  <small>
+                    <time dateTime={post.node.frontmatter.date}>{post.node.frontmatter.date}</time>
+                  </small>
+                </p>
+                <p dangerouslySetInnerHTML={{ __html: post.node.html }} />
+              </article>
             )
           }
         })}
@@ -62,10 +72,10 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
+          html
           frontmatter {
             path
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM D, YYYY")
           }
           frontmatter {
             title
