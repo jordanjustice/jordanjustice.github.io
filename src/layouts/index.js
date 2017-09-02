@@ -10,54 +10,58 @@ class Template extends React.Component {
     let header
     if (location.pathname === '/') {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
+        <header>
+          <h1
             style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
+              marginBottom: rhythm(1.5),
+              marginTop: 0,
+              fontWeight: 900
             }}
-            to={'/'}
           >
-            Gatsby Starter Blog
-          </Link>
-        </h1>
+            <Link
+              style={{
+                boxShadow: 'none',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
+              to={'/'}
+            >
+              Jordan Justice
+            </Link>
+          </h1>
+        </header>
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
+        <header>
+          <h1
             style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
+              marginTop: 0,
+              fontWeight: 900
             }}
-            to={'/'}
           >
-            Gatsby Starter Blog
-          </Link>
-        </h3>
+            <Link
+              style={{
+                boxShadow: 'none',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
+              to={'/'}
+            >
+              Jordan Justice
+            </Link>
+          </h1>
+        </header>
       )
     }
     return (
       <Container
         style={{
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
+            maxWidth: rhythm(24),
+            margin: `0 auto`,
+            padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
+          }}
+        >
         {header}
         {children()}
       </Container>
