@@ -10,48 +10,44 @@ class Template extends React.Component {
     let header
     if (location.pathname === '/') {
       header = (
-        <header>
-          <h1
+        <h1
+          style={{
+            marginBottom: rhythm(1.5),
+            marginTop: 0,
+            fontWeight: 900
+          }}
+        >
+          <Link
             style={{
-              marginBottom: rhythm(1.5),
-              marginTop: 0,
-              fontWeight: 900
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit',
             }}
+            to={'/'}
           >
-            <Link
-              style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
-                color: 'inherit',
-              }}
-              to={'/'}
-            >
-              Jordan Justice
-            </Link>
-          </h1>
-        </header>
+            Jordan Justice
+          </Link>
+        </h1>
       )
     } else {
       header = (
-        <header>
-          <h1
+        <h1
+          style={{
+            marginTop: 0,
+            fontWeight: 900
+          }}
+        >
+          <Link
             style={{
-              marginTop: 0,
-              fontWeight: 900
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit',
             }}
+            to={'/'}
           >
-            <Link
-              style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
-                color: 'inherit',
-              }}
-              to={'/'}
-            >
-              Jordan Justice
-            </Link>
-          </h1>
-        </header>
+            Jordan Justice
+          </Link>
+        </h1>
       )
     }
     return (
