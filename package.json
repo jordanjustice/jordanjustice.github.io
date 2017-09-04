@@ -1,11 +1,7 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
-  },
+  "name": "jordanjustice.github.io",
+  "description": "My blog and portfolio site",
+  "author": "Jordan Justice",
   "dependencies": {
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
