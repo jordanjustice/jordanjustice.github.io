@@ -98,7 +98,9 @@ class HomePage extends React.Component {
 				<HomeLinks>
 					<Link to="/work/">work</Link>
 					<span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-					<Link to="/about/">more about jordan</Link>
+					<a href="https://twitter.com/jordantweetsss">twitter</a>
+					<span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+					<a href="https://www.instagram.com/jordanjustice/">instagram</a>
 				</HomeLinks>
 				<Spacer />
       </HomeWrapper>
