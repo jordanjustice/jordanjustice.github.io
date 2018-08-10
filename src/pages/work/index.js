@@ -22,6 +22,10 @@ const Article = styled.article`
 
 const WorkGroup = styled.div`
 	padding: 2rem 0;
+
+	a {
+		color: #F2715D;
+	}
 `;
 
 const WorkDate = styled.p`
@@ -52,14 +56,20 @@ class WorkPage extends React.Component {
 					<h3>Doing work—the hard and generous work—has been a great gift to me. I can only hope the things I produce are gifts to others.</h3>
 
 					<WorkGroup>
-						<WorkDate>2014 - Present</WorkDate>
-						<WorkTitle>Product and Platform Manager at Root Inc.</WorkTitle>
-						<WorkDescription>Working to build a digital product strategy and a team culture to execute on it, I've helped change the method and quality of projects for our clients, and shipped Root's first three digital products.</WorkDescription>
+						<WorkDate>2018 - Present</WorkDate>
+						<WorkTitle>Co-founder at <a href="https://kinship.it" style={{ color: "#414DA0"}}>Kinship</a></WorkTitle>
+						<WorkDescription>Building a Toledo, Ohio based software development agency focused on collaboration and craftsmanship.</WorkDescription>
+					</WorkGroup>
+
+					<WorkGroup>
+						<WorkDate>2014 - 2018</WorkDate>
+						<WorkTitle>Product and Platform Manager at <a href="https://www.rootinc.com" style={{color: "#A2B627"}}>Root Inc.</a></WorkTitle>
+						<WorkDescription>Worked to build a digital product strategy and a team culture to execute on it, helped change the method and quality of projects for Root clients, and shipped Root's first three digital products.</WorkDescription>
 					</WorkGroup>
 
 					<WorkGroup>
 						<WorkDate>2012 - 2014</WorkDate>
-						<WorkTitle>Web Developer at Concentrek Group</WorkTitle>
+						<WorkTitle>Web Developer at <a href="https://concentrekgroup.com" style={{color: "#D93832"}}>Concentrek Group</a></WorkTitle>
 						<WorkDescription>Led our team into building responsive sites (we had no idea of how much the web was really changing), wrangled svg browser compatibility and @2x assets (thanks Retina displays).</WorkDescription>
 					</WorkGroup>
 
