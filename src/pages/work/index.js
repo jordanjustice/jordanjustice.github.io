@@ -54,9 +54,15 @@ class WorkPage extends React.Component {
 				<Article>
 					<h1>Work</h1>
 					<h3>Doing work—the hard and generous work—has been a great gift to me. I can only hope the things I produce are gifts to others.</h3>
-
+					
+	    				<WorkGroup>
+						<WorkDate>2020 - Present</WorkDate>
+						<WorkTitle>Director of UX at <a href="https://concentrekgroup.com" style={{ color: "#D93832"}}>Concentrek</a></WorkTitle>
+						<WorkDescription>Managing product design and user experience for Concentrek's Konvert™ platform.</WorkDescription>
+					</WorkGroup>
+	    
 					<WorkGroup>
-						<WorkDate>2018 - Present</WorkDate>
+						<WorkDate>2018 - 2020</WorkDate>
 						<WorkTitle>Co-founder at <a href="https://kinship.it" style={{ color: "#414DA0"}}>Kinship</a></WorkTitle>
 						<WorkDescription>Building a Toledo, Ohio based software development agency focused on collaboration and craftsmanship.</WorkDescription>
 					</WorkGroup>
@@ -81,7 +87,7 @@ class WorkPage extends React.Component {
 
 					<WorkGroup>
 						<WorkTitle>Education</WorkTitle>
-						<WorkDescription>What is it for? It, being education. Specifically in this case, where you're reading about me, potentially trying to rank me among others, what is higher ed for?<br /><br />I'm an <a href="https://altmba.com/">altMBA</a> alumni (altMBA 11). It's taught me to know what I see, rather than see what I know. If this sounds like something interesting to you, I'm always available to chat about it.</WorkDescription>
+						<WorkDescription>I'm an <a href="https://altmba.com/">altMBA</a> alumni (altMBA 11). It's taught me to know what I see, rather than see what I know. If this sounds like something interesting to you, I'm always available to chat about it.</WorkDescription>
 					</WorkGroup>
 				</Article>
 			</Wrapper>
